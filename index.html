@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickFast - Encuentra las mejores entradas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="tickfast.png" alt="TickFast Logo" class="logo-img">
+                </div>
+                <nav class="nav-links">
+                    <a href="#home">Inicio</a>
+                    <a href="#eventos">Eventos</a>
+                    <a href="#about">Acerca de</a>
+                    <a href="#auth-section">Cuenta</a>
+                    <a href="#contact">Contacto</a>
+                </nav>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Encuentra las mejores entradas en un solo lugar</h1>
+                <p>TickFast busca por ti las mejores ofertas de entradas de todos los sitios web y las muestra en un solo lugar.</p>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar eventos, artistas, deportes...">
+                    <select id="categoryFilter">
+                        <option value="">Todas las categorías</option>
+                        <option value="musica">Música</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="teatro">Teatro</option>
+                        <option value="comedia">Comedia</option>
+                    </select>
+                    <select id="locationFilter">
+                        <option value="">Todas las ciudades</option>
+                        <option value="buenos-aires">Buenos Aires</option>
+                        <option value="cordoba">Córdoba</option>
+                        <option value="rosario">Rosario</option>
+                        <option value="mendoza">Mendoza</option>
+                    </select>
+                    <button onclick="searchTickets()" class="search-btn">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results" id="eventos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entradas Disponibles</h2>
+                <div class="filters">
+                    <select id="sortFilter" onchange="sortResults()">
+                        <option value="date">Ordenar por fecha</option>
+                        <option value="price">Ordenar por precio</option>
+                        <option value="popularity">Ordenar por popularidad</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="tickets-grid" id="ticketsGrid">
+                <!-- Tickets dinámicos -->
+            </div>
+            
+            <div class="load-more">
+                <button onclick="loadMoreTickets()" id="loadMoreBtn">Cargar más entradas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>¿Qué es TickFast?</h2>
+                    <p>TickFast es tu portal definitivo para encontrar entradas. No vendemos entradas directamente, sino que agregamos todas las ofertas disponibles de los principales sitios.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">🔍</div>
+                            <h3>Búsqueda Completa</h3>
+                            <p>Buscamos en todos los sitios principales para mostrarte todas las opciones.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">💰</div>
+                            <h3>Mejores Precios</h3>
+                            <p>Comparamos precios de diferentes plataformas para que encuentres la mejor oferta.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Rápido y Fácil</h3>
+                            <p>Encontrá lo que buscas en segundos y comprá directamente en el sitio oficial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Section -->
+    <section id="auth-section" class="about">
+      <div class="container">
+        <h2>Tu Cuenta</h2>
+        <input type="text" id="usernameInput" placeholder="Usuario">
+        <input type="password" id="passwordInput" placeholder="Contraseña">
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Registrarse</button>
+        <p id="authMessage"></p>
+        <button onclick="logout()">Cerrar Sesión</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TickFast</h3>
+                    <p>Tu portal de búsqueda de entradas más completo.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#auth-section">Cuenta</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Términos de uso</a></li>
+                        <li><a href="#">Privacidad</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 TickFast. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Modal -->
+    <div class="modal" id="loadingModal">
+        <div class="modal-content">
+            <div class="loading-spinner"></div>
+            <p>Buscando las mejores entradas para ti...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
