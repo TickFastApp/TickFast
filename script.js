@@ -10,12 +10,12 @@ let allTickets = [
         venue: "Estadio River Plate",
         price: 55000,
         source: {
-            name: "AllAccess",
+            name: "All Access",
             url: "https://www.allaccess.com.ar/event/maria-becerra",
             color: "#7b0cc5ff"
         },
         image: "https://cdn.getcrowder.com/images/4458ebd9-942e-45ec-b302-9e45e21148e8-mb-1312-banneraa-1920x720.jpg?w=1920&format=webp",
-        availability: "Pocas disponibles"
+        availability: "Muy Pocas disponibles"
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ let allTickets = [
         venue: "Hipodromo de San Isidro",
         price: 375000,
         source: {
-            name: "AllAccess",
+            name: "All Access",
             url: "https://www.allaccess.com.ar/event/lollapalooza-2026-venta-general",
             color: "#7b0cc5ff"
         },
@@ -49,7 +49,7 @@ let allTickets = [
             color: "#00369bff"
         },
         image: "https://www.movistararena.com.ar/static/artistas/B5298_DUKI_FileFotoFichaDesktop",
-        availability: "Pocas disponibles",
+        availability: "Muy Pocas disponibles",
     },
     {
         id: 4,
@@ -95,7 +95,7 @@ let allTickets = [
         venue: "Estadio Mas Monumental - River Plate",
         price: 80000,
         source: {
-            name: "AllAccess",
+            name: "All Access",
             url: "https://www.allaccess.com.ar/event/dua-lipa",
             color: "#7200b4ff"
         },
@@ -294,7 +294,7 @@ function getCategoryName(category) {
 }
 
 function getAvailabilityClass(availability) {
-    if (availability.includes('Muy pocas')) return 'availability-critical';
+    if (availability.includes('SOLD OUT')) return 'availability-critical';
     if (availability.includes('Pocas')) return 'availability-warning';
     return 'availability-good';
 }
@@ -421,16 +421,16 @@ function generateMoreEvents() {
             category: "musica",
             location: "Buenos Aires",
             date: "2025-10-18",
-            time: "12:00",
+            time: "21:00",
             venue: "Estadio de Huracán",
             price: 95000,
             source: {
-                name: "Allaccess",
+                name: "All Access",
                 url: "https://www.allaccess.com.ar/event/guns-n-roses",
                 color: "#8200b6ff"
             },
             image: "https://cdn.getcrowder.com/images/2c298c07-dac1-4232-8080-704fac5256bb-gunsnroses-bannersaa-nuevafecha1920x720.jpg",
-            availability: "Pocas disponibles",
+            availability: "Muy Pocas disponibles",
         },
         {
             id: 8,
@@ -466,6 +466,261 @@ function generateMoreEvents() {
             image: "https://prod-cms-static.ticketek.com.ar/sites/default/files/images/show-header/juan960.png",
             availability: "Disponibles",
         },
+        {
+            id: 10,
+            title: "Joaco Burgos",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-09-13",
+            time: "21:00",
+            venue: "Vorterix",
+            price: "20000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/event/joaco-burgos",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/ff76ae12-adae-463b-87b1-8ed40310b98d-joaco-burgos-aa-640x640-1.jpg?w=1920",
+            availability: "Disponibles"
+        },
+        {
+            id: 11,
+            title: "Andrea Bocelli Live in Concert Hipódromo de San Isidro",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-11-19",
+            time: "21:00",
+            venue: "Hipodromo de San Isidro",
+            price: "210000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/andrea-bocelli-hipodromo",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/47331c4e-5e70-40cc-918f-1ffbe2d1497a-andreabocelli-hsi-banneraa-640x640.jpg?w=1920",
+            availability: "Pocas Disponible"
+        },
+        {
+            id: 12,
+            title: "Kendrick Lamar Grand National Tour with Ca7riel & Paco Amoroso",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-10-05",
+            time: "21:00",
+            venue: "Estadio Mas Monumental - River Plate",
+            price: "80000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/kendrick-lamar",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/1572fd27-1afa-4c33-bb4d-20ef7e148cd8-640x640-7.jpg?w=1920",
+            availability: "Pocas Disponibles"
+        },
+        {
+            id: 13,
+            title: "Ulises Bueno",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-09-28",
+            time: "21:00",
+            venue: "Estadio de la Costa",
+            price: "45000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/ulises-bueno",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/e63633fc-81fe-44cd-b9c2-f9a1bfd1a70a-flyer-ulises-bueno---estadio-de-la-costa-640x640.jpg?w=1920",
+            availability: "Disponibles"
+        },
+        {
+            id: 14,
+            title: "Imagine Dragons LOOM World Tour",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-10-24",
+            time: "20:00",
+            venue: "Hipodromo de San Isidro",
+            price: "80000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/imagine-dragons",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/ce903353-bdaf-4910-9036-dc86df9d4c94-bf38aff4-e196-4dcb-944c-1a5722097631-imaginedragons-bannersaa-640x640.jpg?w=1920",
+            availability: "Disponibles"
+        },
+        {
+            id: 15,
+            title: "Sex Pistols",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-09-12",
+            time: "21:00",
+            venue: "Estadio Obras",
+            price: "TBC",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/event/sex-pistols",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/8992fcf7-3d46-47c4-990e-94fad6e94da2-pistols.jpg?w=1920",
+            availability: "SOLD OUT"
+        },
+        {
+            id: 16,
+            title: "Linkin Park From Zero World Tour",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-10-32",
+            time: "20:00",
+            venue: "Parque de la Ciudad",
+            price: "90000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/linkin-park",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/d16a4761-5722-4e54-80b2-9260a922a80b-linkin-640x640.jpg?w=1920",
+            availability: "Disponibles"
+        },
+        {
+            id: 17,
+            title: "Bad Bunny DTMF World Tour",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2026-02-14",
+            time: "20:00",
+            venue: "Estadio Mas Monumental - River Plate",
+            price: "95000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/bad-bunny",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/fcf30efa-77c5-4cf9-8b36-67387ca88ab1-789058aa-7e3a-40ae-9a96-7dcf42b8c66b-banner-mobile--quentro-640-x-640.jpg?w=1920",
+            availability: "SOLD OUT"
+        },
+        {
+            id: 18,
+            title: "Los Ángeles Azules",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-10-26",
+            time: "20:00",
+            venue: "Parque de la Ciudad",
+            price: "50000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/los-angeles-azules",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/35480df9-4cca-4a46-9c12-3ab977ebf67c-bannersaa640x640.jpg?w=1920",
+            availability: "Disponibles"
+        },
+        {
+            id: 19,
+            title: "Oasis Live '25",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-11-16",
+            time: "21:00",
+            venue: "Estadio Mas Monumental - River Plate",
+            price: "145000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/Oasis",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/e0755d0f-eb68-45d8-ab5d-406861dc15b1-98925d7c-ebdc-4683-8aef-930bfcf1ead5-640x640-web-aa-mobile.jpg?w=1920",
+            availability: "Muy Pocas disponibles"
+        },
+        {
+            id: 20,
+            title: "Andrea Bocelli Live in Concert Teatro Colon",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-11-18",
+            time: "21:00",
+            venue: "Teatro Colon",
+            price: "TBC",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/event/andrea-bocelli",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/b126e0bf-231a-4da6-85ca-219db19cd06e-640x640-13.jpg?w=1920",
+            availability: "SOLD OUT"
+        },
+        {
+            id: 21,
+            title: "Airbag EL CLUB DE LA PELEA Tercer Round",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-10-06",
+            time: "21:00",
+            venue: "Estadio Mas Monumental - River Plate",
+            price: "45000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/page/Airbag",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/e3313ea6-58ba-4376-8d25-4cda24729246-640x640-11.jpg?w=1920",
+            availability: "SOLD OUT"
+        },
+        {
+            id: 22,
+            title: "Pierce The Veil I CAN’T HEAR YOU World Tour",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-12-13",
+            time: "21:00",
+            venue: "C Art Media",
+            price: "60000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/event/pierce-the-veil",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/4a5e7a9f-8eb7-4f02-8f1a-df7c599fa98a-pierce-649.jpg?w=1920",
+            availability: "Disponibles"
+        },
+        {
+            id: 23,
+            title: "Lola Indigo Nave Dragón",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-10-03",
+            time: "21:00",
+            venue: "C Art Media",
+            price: "50000",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/event/lola-indigo",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/51d31d70-d910-4991-93e5-587984026e24-aa-banner-640x640.jpg?w=1920",
+            availability: "Pocas Disponibles"
+        },
+        {
+            id: 21,
+            title: "Chase Atlantic Lost in South America Tour",
+            category: "musica",
+            location: "Buenos Aires",
+            date: "2025-11-20",
+            time: "TBC",
+            venue: "C Art Media",
+            price: "TBC",
+            source: {
+                name: "All Access",
+                url: "https://www.allaccess.com.ar/event/chase-atlantic",
+                color: "#8200b6ff"
+            },
+            image: "https://cdn.getcrowder.com/images/d505c262-27c8-4aa5-a35e-aae9e98f186d-chaseatlantic-banneraa-640x640.jpg?w=1920",
+            availability: "PRÓXIMAMENTE"
+        }
     ];
     
     allTickets = [...allTickets, ...additionalEvents];
